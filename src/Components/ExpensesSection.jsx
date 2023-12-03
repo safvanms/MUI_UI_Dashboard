@@ -3,12 +3,13 @@ import { Box, Typography, useMediaQuery } from '@mui/material'
 import Circle from '../../src/Assets/Images/circle.png'
 
 const StyledContainer = styled(Box)({
-  minWidth: '30%',
+  width: '42%',
   border: '1px solid lightgrey',
   borderRadius: '10px',
   padding: '20px',
   marginTop:"10px",
-  backgroundColor:"white"
+  backgroundColor:"white",
+  height:"90%"
 })
 
 const ExpenseHeader = styled(Box)({
@@ -65,12 +66,17 @@ const StyledImage = styled('img')({
    })
 
 export default function ExpensesSection() {
-  const isSmallScreen = useMediaQuery('(max-width:800px)')
+  const isSmallScreen = useMediaQuery('(min-width:370px)and(max-width:800px)')
   const mediumScreen = useMediaQuery('(max-width:1140px)')
 
   return (
     <>
-      <StyledContainer style={{width:isSmallScreen||mediumScreen?"95%":'', marginTop:mediumScreen?"310px":''}}>
+      <StyledContainer 
+      style={{
+        width: isSmallScreen || mediumScreen ? '95%' : '',
+        marginTop: isSmallScreen ? '200px' : mediumScreen ? '480px' : '0px',
+      }}
+      >
         <ExpenseHeader>
           <StyledText1>All Expenses</StyledText1>
           <StyledText2>View All</StyledText2>

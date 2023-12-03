@@ -1,11 +1,11 @@
 import styled from '@emotion/styled'
-import { Box, Typography } from '@mui/material'
+import { Box, Typography, useMediaQuery } from '@mui/material'
 import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward'
 
 
 const StyledContainer = styled(Box)({
-  width: '180px',
-  height: '70px',
+  width: '200px',
+  height: '75px',
   display: 'flex',
   justifyContent: 'flex-start',
   alignItems: 'center',
@@ -17,12 +17,11 @@ const StyledContainer = styled(Box)({
 const InnerBox1 = styled(Box)({
   width: '7px',
   height: '100%',
-//   backgroundColor: 'green',
   borderRadius: '10px 0px 0px 10px',
 })
 
 const InnerBox2 = styled(Box)({
-  width: '173px',
+  width: '193px',
   height: '100%',
   display: 'flex',
   justifyContent: 'space-around',
@@ -52,8 +51,9 @@ const StyledText3 = styled(Typography)({
 })
 
 export default function Summery({item,amount,bg,percentage}) {
+  const isSmallScreen = useMediaQuery('(max-width:500px)')
   return (
-    <StyledContainer>
+    <StyledContainer style={{width:isSmallScreen?"40%":""}}>
       <InnerBox1 style={{backgroundColor:bg}} ></InnerBox1>
       <InnerBox2>
         <Box>

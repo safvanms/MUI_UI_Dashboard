@@ -28,6 +28,7 @@ const StyledBox2 = styled(Box)({
   flexDirection: 'column',
   justifyContent: 'center',
   alignItems: 'center',
+  // width: '70%'
 })
 
 const SummeryContainer = styled(Box)({
@@ -50,7 +51,7 @@ const GraphsContainer = styled(Box)({
 })
 
 const StyledImage = styled('img')({
-  width: '500px',
+  width: '62%',
   border: '1px solid lightgrey',
   borderRadius: '10px',
 })
@@ -82,18 +83,18 @@ export default function Home() {
             <Summery
               item={'Savings'}
               amount={'123,320'}
-              bg={'pink'}
+              bg={'yellow'}
               percentage={11.09}
             />
             <Summery item={'Expense'} amount={'123,320'} bg={'orange'} />
           </SummeryContainer>
           {/* Graph section */}
-          <GraphsContainer style={{width:isSmallScreen||mediumScreen?"100%":''}} >
-            <StyledImage src={Graph} alt="graph" />
+          <GraphsContainer >
+            <StyledImage src={Graph} alt="graph" style={{width:isSmallScreen||mediumScreen?"100%":''}} />
             {/* Savings section */}
             <SavingsSec />
           </GraphsContainer>
-          <GraphsContainer>
+          <GraphsContainer style={{marginTop:"15px"}}>
           <ExpensesSection/>
           <History/>
           </GraphsContainer>

@@ -30,12 +30,13 @@ const histories = [
 ]
 
 const StyledContainer = styled(Box)({
-  minWidth: '40%',
+  minWidth: '45%',
   border: '1px solid lightgrey',
   borderRadius: '10px',
   padding: '20px',
   marginTop: '10px',
-  backgroundColor:"white"
+  backgroundColor:"white",
+  height:"90%"
 
 })
 

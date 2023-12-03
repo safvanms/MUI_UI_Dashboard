@@ -39,8 +39,8 @@ const SavingsContainer = styled(Box)({
   borderRadius: '10px',
   border: '1px solid lightgrey',
   padding: '10px',
-  minWidth: '30%',
-  minHeight:"95%",
+  minWidth: '33%',
+  minHeight:"100%",
   backgroundColor:"white"
 })
 

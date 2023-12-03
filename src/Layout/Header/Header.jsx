@@ -10,7 +10,7 @@ import ListItem from '@mui/material/ListItem'
 // import ListItemText from '@mui/material/ListItemText'
 import useMediaQuery from '@mui/material/useMediaQuery'
 import logo from '../../Assets/Images/appLogo.png'
-import { Avatar, Box, Button, Paper } from '@mui/material'
+import { Avatar, Box, Button } from '@mui/material'
 import GridViewIcon from '@mui/icons-material/GridView'
 import SwapVertIcon from '@mui/icons-material/SwapVert'
 import PaymentsIcon from '@mui/icons-material/Payments'
@@ -171,7 +171,6 @@ const Header = () => {
         style={{ color: 'black' }}
         className='Hamburger'
       >
-        <Paper style={{ backgroundColor: '#ffff', color: 'black', minWidth: '250px' }}>
         <List style={styles.drawerList}>
 
         <StyledImage style={{marginLeft:"20px"}} src={logo} alt="logo" />
@@ -202,10 +201,14 @@ const Header = () => {
           <SettingsIcon />
           </ListItem>
           <ListItem>
+          <StyledButton size="small" startIcon={<PaymentsIcon/>}>
+              Card Details
+            </StyledButton>
+          </ListItem>
+          <ListItem>
           <Typography>User's Name</Typography>
           </ListItem>
         </List>
-        </Paper>
       </Drawer>
     </AppBar>
   )
